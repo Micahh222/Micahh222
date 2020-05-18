@@ -1,0 +1,52 @@
+# M. Holness
+
+# creates rock, paper, scissors game with your cat
+
+def modulereload(modulename):
+    import importlib
+    importlib.reload(modulename)
+
+import random
+
+'''
+the function below has no purpose, and is never called
+'''
+
+def cond(rock,paper,scissors):
+    rock = 'r'
+    paper = 'p'
+    scissors = 's'
+
+def go():
+    cat = random.choice('rps') 
+    your_move = input("Your move: (r)ock, (p)aper, or (s)cissors? ")
+    if cat == 'r':
+        print("Your cat chose rock")
+        if your_move == cat:
+            print("Tie!...You both chose rock")
+        elif your_move == 's':
+            print("You lost!...Rock smashes scissors")
+        else:
+            if your_move == 'p':
+                print("You won!...Paper covers rock")
+    elif cat == 'p':
+        print("Your cat chose paper")
+        if your_move == cat:
+            print("Tie!...You both chose paper")
+        elif your_move == 'r':
+            print("You lost!...Paper covers rock")
+        else:
+            if your_move == 's':
+                print("You won!...Scissors cuts paper")
+    else:
+        if cat == 's':
+            print("Your cat chose scissors")
+            if your_move == cat:
+                print("Tie!...You both chose scissors")
+            elif your_move == 'r':
+                print("You won!...Rock smashes scissors")
+            else:
+                if your_move == 'p':
+                    print("You lost!...Scissors cuts paper")
+    
+    
