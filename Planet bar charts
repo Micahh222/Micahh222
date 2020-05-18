@@ -1,0 +1,36 @@
+# M. Holness
+
+# creates single-row bar charts
+# diplays relative distance of planets from sun
+
+def modulereload(modulename):
+    import importlib
+    importlib.reload(modulename)
+
+    
+MAX_COLS = 60
+
+def show_one_bar(symbol,value,scale): 
+    bar = int(value // scale) * '-'
+    print(bar, symbol) 
+      
+def go_planets(): 
+    Mercury = 57e6
+    Venus = 108e6
+    Earth = 150e6
+    Mars = 228e6
+    Jupiter = 779e6
+    Saturn = 1.43e9
+    Uranus = 2.88e9
+    Neptune = 4.50e9
+    scale = Neptune / MAX_COLS
+    print('One dash equals {:.0f} kilometers'.format(scale))
+    show_one_bar('Mer',Mercury,scale)
+    show_one_bar('Ven',Venus,scale)
+    show_one_bar('Ear',Earth,scale)
+    show_one_bar('Mar',Mars,scale)
+    show_one_bar('Jup',Jupiter,scale)
+    show_one_bar('Sat',Saturn,scale)
+    show_one_bar('Ura',Uranus,scale)
+    show_one_bar('Nep',Neptune,scale)
+    
