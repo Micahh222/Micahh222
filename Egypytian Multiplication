@@ -1,0 +1,22 @@
+# M. Holness
+
+# Egyptian multiplication
+
+def modulereload(modulename):
+    import importlib
+    importlib.reload(modulename)
+
+def emult(a,b):
+    print("a = ",a,"b = ",b)
+    if b == 1:
+        return a
+    elif b % 2 == 0:
+        return emult(a * 2, b // 2)
+    else:
+        return a + emult(a * 2, b // 2)
+
+def go(a,b):
+    head = "Egypt - multiplying {} by {}".format(a,b)
+    p = emult(a,b)
+    print("The product is {}".format(p))
+    
